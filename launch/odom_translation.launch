@@ -1,0 +1,9 @@
+<launch>
+    <node name="odom_translation" pkg="odom_translation" type="odom_translation_node" output="screen">
+        <remap from="~gps" to="/djiros/gps" />
+        <remap from="~odom" to="/self_calibration_estimator/odometry" />
+        <remap from="~init" to="/self_calibration_estimator/init_odometry" />
+        <remap from="~image" to="/feature_tracker/tracked_image" />
+        <remap from="~optitrack" to="/Robot_1/pose" />
+    </node>
+</launch>
